@@ -10,9 +10,13 @@
 
 ## Code Problems
 
-1. Declare a function named `findLongestWord`, that takes an array of strings as an argument, and returns the longest string in the array. If there is more than one longest word, the function should return the first longest string that appears in the array. You must solve this without using any array methods. 
-```
-findLongestWord(["The","quick","brown", "fox", "jumped", "over", "the", "lazy", "dog"]) //returns "jumped"
+1. Declare a function named `replaceWithYerr` that accepts three arguments: an Array, a start index, and the number of elements to replace with the string 'yerr'. The function should return a **new** Array, with the same elements as the original Array, except elements at the starting index, are replaced with the string 'yerr'. The number of elements replaced is determined by the third argument. 
 
-findLongestWord(["jazzy", "jumpy", "quaky") //returns "jazzy"
+**Note**: The second and third arguments are *optional*. If the third argument is missing, the function should return replace all elements from the starting index to the end of the array. If only an array argument is passed, it should return a copy of the array argument, with all elements replaced.
+```
+const months = ['Jan', 'February', 'March', 'April', 'May', 'June'];
+
+replaceWithYerr(months, 1, 3) //['Jan', 'yerr', 'yerr, 'yerr', 'May', 'June']
+replaceWithYerr(months, 1) //['Jan', 'yerr', 'yerr, 'yerr', 'yerr', 'yerr']
+replaceWithYerr(months) //['yerr', 'yerr', 'yerr, 'yerr', 'yerr', 'yerr']
 ```
